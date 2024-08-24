@@ -10,9 +10,77 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/147cbbd92a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <style>
+        .font-manrope {
+            font-family: "manrope", 'sans-serif';
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        lemon: '#ABEF5F',
+                        'bg-body': '#F4F4F4',
+                    },
+                    
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="font-manrope">
+    <header class="bg-gradient-to-b from-bg-body to-white">
+        <div class="navbar-container flex justify-between bg-base-100 container lg:mx-auto lg:pt-8 bg-transparent">
+
+            <a class="brand-logo text-2xl lg:text-3xl font-extrabold cursor-pointer">
+                <i class="fa-solid fa-arrow-right icon-arrow bg-lemon p-2 rounded-full -rotate-45 mx-3"></i>
+                Rinterio
+            </a>
+
+            <div class="mobile-menu-wrapper">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="menu-toggle btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-menu h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="dropdown-menu menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] w-32 mt-3 p-2 shadow">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navbar-links hidden lg:flex items-center">
+                <ul class="nav-items flex gap-8 text-lg">
+                    <li class="nav-item hover:font-bold"><a href="#">Home</a></li>
+                    <li class="nav-item hover:font-bold"><a href="#">Services</a></li>
+                    <li class="nav-item hover:font-bold"><a href="#">Portfolio</a></li>
+                    <li class="nav-item hover:font-bold"><a href="#">Blogs</a></li>
+                    <li class="nav-item hover:font-bold"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="action-buttons hidden lg:flex">
+                <a class="search-button bg-white text-xl font-bold mr-5 border-2 rounded-full my-auto">
+                    <i class="fa-solid fa-magnifying-glass p-3"></i>
+                </a>
+                <a class="cart-button bg-white text-xl font-bold mr-5 border-2 rounded-full my-auto">
+                    <i class="fa-solid fa-cart-shopping p-3"></i>
+                </a>
+                <a class="consult-button bg-lime-400 text-xl py-3 px-5 font-bold rounded-full">
+                    Book Consult
+                    <i class="fa-solid fa-arrow-right icon-consult bg-black text-white p-2 rounded-full -rotate-45 mx-3"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
     
 </body>
 </html>
